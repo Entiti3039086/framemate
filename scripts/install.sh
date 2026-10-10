@@ -1,5 +1,5 @@
 #!/bin/sh
-# FrameMate agent installer for the Steam Frame. Installs the Flatpak, registers the user service and prints the pairing QR code for the app.
+# FrameMate agent installer for SteamOS x86_64 devices (e.g. Steam Deck). Installs the Flatpak, registers the user service and prints the pairing QR code for the app.
 #
 #   curl -LsSf https://raw.githubusercontent.com/nailuj05/framemate/main/scripts/install.sh | sh
 #
@@ -51,8 +51,8 @@ main() {
   esac
 
   arch=$(uname -m)
-  [ "$arch" = aarch64 ] || die "the agent runs on the Steam Frame (aarch64), not on $arch.
-Run this in a terminal on the Frame via SSH, or use the Desktop Mode Konsole."
+  [ "$arch" = x86_64 ] || die "the agent runs on SteamOS x86_64 devices (for example Steam Deck), not on $arch.
+Run this in a terminal on the device via SSH, or use the Desktop Mode Konsole."
 
   command -v curl >/dev/null || die "curl is not installed."
 
