@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Packages the prebuilt static agent as a Flatpak bundle. No flatpak-builder needed:
-# nothing is compiled or run for aarch64 here, the build directory is only assembled
+# nothing is compiled or run for x86_64 here, the build directory is only assembled
 # (binary + metadata) and exported, so this works on an x86 desktop.
 #
 #   scripts/flatpak.sh            build target/flatpak/framemate-agent.flatpak
@@ -11,9 +11,9 @@
 set -euo pipefail
 
 APP_ID=dev.framemate.Agent
-ARCH=aarch64
+ARCH=x86_64
 RUNTIME="org.freedesktop.Platform/$ARCH/26.08"
-TARGET=aarch64-unknown-linux-musl
+TARGET=x86_64-unknown-linux-musl
 HOST="${FRAME_HOST:-steamos@frame.local}"
 read -ra SSH_OPTS <<< "${FRAME_SSH_OPTS:-}"
 

@@ -11,7 +11,7 @@ set -euo pipefail
 
 HOST="${FRAME_HOST:-steamos@frame.local}"
 UNIT=framemate-agent-dev
-TARGET=aarch64-unknown-linux-musl
+TARGET=x86_64-unknown-linux-musl
 REMOTE_BIN='.local/lib/framemate/framemate-agent'
 # Absolute path: `ssh` is often aliased (e.g. kitty's ssh kitten).
 read -ra SSH_OPTS <<< "${FRAME_SSH_OPTS:-}"

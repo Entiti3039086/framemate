@@ -22,5 +22,5 @@ pkgs.mkShell {
     openssl
   ];
 
-  CC_aarch64_unknown_linux_musl = "clang";
+  CC_x86_64_unknown_linux_musl = "clang";
 }

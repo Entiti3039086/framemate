@@ -134,7 +134,7 @@ the app the Android SDK + NDK and JDK 21. On Nix, `nix-shell` (or direnv) covers
 Deno; the Android SDK/NDK and JDK are not included.
 
 ```sh
-# Agent: static aarch64 binary → Flatpak bundle (no flatpak-builder or emulation needed)
+# Agent: static x86_64 binary → Flatpak bundle (no flatpak-builder or emulation needed)
 scripts/flatpak.sh                  # → target/flatpak/framemate-agent.flatpak
 scripts/flatpak.sh install          # build, install on the Frame via SSH, register the service
 

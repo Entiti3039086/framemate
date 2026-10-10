@@ -22,7 +22,7 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
         with:
-          targets: aarch64-unknown-linux-musl
+          targets: x86_64-unknown-linux-musl
 
       - uses: Swatinem/rust-cache@v2
         with:
@@ -31,7 +31,7 @@ jobs:
       - name: Install flatpak
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends flatpak
 
-      # Cross-builds the static musl binary and assembles + exports the bundle (no aarch64 code runs).
+      # Cross-builds the static musl binary and assembles + exports the bundle (no x86_64 code runs).
       - name: Build bundle
         run: scripts/flatpak.sh
 

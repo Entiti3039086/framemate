@@ -36,7 +36,7 @@ That second point is key, it allows future app store releases without needing to
 
 | Path | |
 |---|---|
-| `crates/agent` | The agent that runs on the Frame. Static `aarch64-unknown-linux-musl` binary, shipped as a Flatpak |
+| `crates/agent` | The agent service that runs on the PC (e.g. Steam Deck). Static `x86_64-unknown-linux-musl` binary, shipped as a Flatpak |
 | `app` | The phone app: SvelteKit frontend |
 | `app/src-tauri` | The app's Rust shell |
 | `scripts` | `flatpak.sh` (build/install the agent), `deploy.sh` (dev loop on the Frame), `release.sh` (tag a release) |
